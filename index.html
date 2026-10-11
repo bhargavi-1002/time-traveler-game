@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrono Drift</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <span class="brand-kicker">TIME SYSTEM</span>
+          <h1>Chrono Drift</h1>
+        </div>
+        <div id="statusText" class="status-text">Mission briefing</div>
+      </header>
+
+      <div class="hud">
+        <div class="hud-box">
+          <span class="hud-label">Era</span>
+          <strong id="eraName">Ancient Ruins</strong>
+        </div>
+        <div class="hud-box">
+          <span class="hud-label">Relics</span>
+          <strong id="relicCount">0 / 3</strong>
+        </div>
+        <div class="hud-box">
+          <span class="hud-label">Lives</span>
+          <strong id="livesCount">3</strong>
+        </div>
+        <div class="hud-box">
+          <span class="hud-label">Score</span>
+          <strong id="scoreCount">0</strong>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+      <div class="story-panel">
+        <p id="storyText">
+          A fracture in history has torn the timeline apart. Recover the lost relics and restore the
+          Chrono Engine before the eras collapse into one another.
+        </p>
+      </div>
+    </div>
+
+    <div id="overlay" class="overlay visible">
+      <div class="overlay-card">
+        <p class="eyebrow">QUANTUM ADVENTURE</p>
+        <h2>Chrono Drift</h2>
+        <p>
+          Leap through three legendary eras, recover the missing time relics, and activate the portal
+          before the timeline breaks.
+        </p>
+        <ul>
+          <li>Move with A / D or arrow keys</li>
+          <li>Jump with W, ↑, or Space</li>
+          <li>Collect all relics, then reach the portal</li>
+        </ul>
+        <button id="startButton">Begin Mission</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
